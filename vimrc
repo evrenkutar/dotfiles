@@ -12,8 +12,12 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'dracula/vim'
+Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
+Plugin 'uarun/vim-protobuf'
+Plugin 'hashivim/vim-terraform'
+Plugin 'ctrlpvim/ctrlp.vim'
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
 
@@ -25,10 +29,10 @@ filetype plugin indent on    " required
 
 " enable syntax highlighting
 syntax on 
-colorscheme dracula 
+" colorscheme dracula 
 " show line numbers
 set number
-
+" set guifont=Source\ Code\ Pro:h14
 " set tabs to have 4 spaces
 set ts=4
 
@@ -46,10 +50,35 @@ set cursorline
 
 " show the matching part of the pair for [] {} and ()
 set showmatch
+" set nobackup
+" set nowb
+" set noswapfile
 set backspace=indent,eol,start
+
+" nerdtree show dotfiles
+let NERDTreeShowHidden=1
 
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
 set foldmethod=indent
 set foldlevel=99
+
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_fmt_on_save=1
+
+let mapleader=","
+nnoremap ,g :YcmCompleter GoToDeclaration<CR>
+nnoremap gg :GoDef<CR>
+nnoremap nt :NERDTreeToggle<CR>
+
 nnoremap <space> za
+
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
