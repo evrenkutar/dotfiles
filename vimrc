@@ -13,6 +13,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'fisadev/vim-isort'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'fatih/vim-go'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'uarun/vim-protobuf'
@@ -42,7 +44,7 @@ colorscheme onedark
 " show line numbers
 set number
 " set guifont=Source\ Code\ Pro:h14
-set guifont=Ubuntu\ Mono:h16
+set guifont=Roboto\ Mono:h14
 set antialias
 set linespace=4
 " set tabs to have 4 spaces
