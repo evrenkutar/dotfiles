@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/go/bin:$HOME/dev/google-cloud-sdk-319.0.0/google-cloud-sdk/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/go/bin:$HOME/dev/bin:$HOME/dev/google-cloud-sdk-319.0.0/google-cloud-sdk/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/evrenkutar/.oh-my-zsh"
@@ -100,7 +100,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export JAVA_HOME="/usr/local/opt/openjdk@11"
-export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
+# export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
